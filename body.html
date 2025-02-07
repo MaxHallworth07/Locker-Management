@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locker Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Locker Management System</h1>
+
+    <!-- Select Area -->
+    <section>
+        <h2>Select Area</h2>
+        <label for="areaSelect">Choose an area:</label>
+        <select id="areaSelect">
+            <option value="">--Select Area--</option>
+            <option value="trainees office">Trainees Office</option>
+            <option value="office 4">Office 4</option>
+            <option value="paediatric anaesthetic office">Paediatric Anaesthetic Office</option>
+            <option value="office 2">Office 2</option>
+            <option value="corridor">Corridor</option>
+        </select>
+    </section>
+
+    <!-- Add New Locker Section -->
+    <section>
+        <h2>Add New Locker</h2>
+        <form id="newLockerForm">
+            <label for="type">Type (Padlock/Key):</label>
+            <select id="type" name="type">
+                <option value="Padlock">Padlock</option>
+                <option value="Key">Key</option>
+            </select>
+            <button type="submit" id="addLockerButton">Add Locker</button>
+        </form>
+    </section>
+
+    <!-- Add New Person Section -->
+    <section>
+        <h2>Add New Person</h2>
+        <form id="newPersonForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="rota">Rota:</label>
+            <select id="rota">
+                <option value="Trainee">Trainee</option>
+                <option value="Consultant">Consultant</option>
+            </select>
+
+            <button type="submit" id="addPersonButton">Add Person</button>
+        </form>
+    </section>
+
+    <!-- Lockers List (Filtered by Area) -->
+    <section>
+        <h2>Lockers in Selected Area</h2>
+        <ul id="lockersUL"></ul>
+    </section>
+
+    <!-- List of People -->
+    <section>
+        <h2>List of People</h2>
+        <ul id="peopleUL"></ul>
+    </section>
+
+    <!-- Assigned Lockers -->
+    <section>
+        <h2>Assigned Lockers</h2>
+        <ul id="assignedUL"></ul>
+        <button type="button" id="assignButton">Assign Lockers to People</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
