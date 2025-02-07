@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function fetchAssigned() {
         httpRequest('GET', API_ASSIGN, null, function (data) {
-            assigned = data;
+            assignedPairs = data;
             renderAssignedPairs
         });
     }
