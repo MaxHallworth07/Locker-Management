@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function fetchAssigned() {
+        httpRequest('GET', API_ASSIGN, null, function (data) {
+            assigned = data;
+            renderAssignedPairs
+        });
+    }
+
     function renderLockers() {
         lockersUL.innerHTML = '';
         const selectedArea = areaSelect.value;
@@ -134,4 +141,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchLockers();
     fetchPeople();
+    fetchAssigned();
 });
